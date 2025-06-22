@@ -13,3 +13,6 @@ const App = () => {
 }
 
 export default App
+
+
+//learn concept of hook and gsap hook
