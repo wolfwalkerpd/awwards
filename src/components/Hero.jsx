@@ -29,10 +29,10 @@ const Hero = () => {
   };
 
   useEffect(() => {
-    if(loadedVideos === totalVideos -1){
+    if (loadedVideos === totalVideos - 1) {
       setIsLoading(false);
     }
-  } ,[loadedVideos])
+  }, [loadedVideos]);
 
   useGSAP(
     () => {
@@ -83,7 +83,6 @@ const Hero = () => {
 
   return (
     <div className=" relative h-dvh w-screen overflow-x-hidden">
-
       {isLoading && (
         <div className="flex-center absolute z-[100] h-dvh w-screen overflow-hidden bg-violet-50">
           <div className="three-body">
@@ -127,7 +126,7 @@ const Hero = () => {
             src={getVideoSrc(
               currentIndex === totalVideos - 1 ? 1 : currentIndex
             )}
-            // autoPlay
+            autoPlay
             loop
             muted
             className="absolute left-0 top-0 size-full object-cover object-center"
